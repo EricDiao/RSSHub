@@ -4,9 +4,8 @@ import type { Context } from 'hono';
 import type { DataItem } from '@/types';
 import cache from '@/utils/cache';
 import got from '@/utils/got';
+import { getLanguage, type HkoLanguage, parseDataset, removeBom, resolveHkoUrl, rewriteRelativeUrls } from '@/utils/hko-editorial';
 import { parseDate } from '@/utils/parse-date';
-
-import { getLanguage, type HkoLanguage, parseDataset, removeBom, resolveHkoUrl, rewriteRelativeUrls } from './utils';
 
 const languages = {
     en: 'en',
